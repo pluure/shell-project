@@ -16,5 +16,4 @@ int main(int ac, char **av, char **env)
 		shell_pmt(av, env);
 	}
 	return (0);
-
 }
