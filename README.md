@@ -40,5 +40,3 @@ If you plan on not working on the shell project (or if at any point in time you 
 If your group gets caught for plagiarism we will not tolerate “I didn’t do anything, so I should not be flagged”. Yes you should be flagged, because you are someone who doesn’t care about others and thought it was ok to let your partner down and to maybe get the score without doing anything.
 
 The shell is an incredibly cool project. GL HF!
-
-Julien
