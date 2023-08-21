@@ -2,7 +2,7 @@
 /**
  * shell_pmt - interface for shell prompt
  * @av: argument vector
- * @env: environment viriable
+ * @env: environment variable
  */
 void shell_pmt(char **av, char **env)
 {
