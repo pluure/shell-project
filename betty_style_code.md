@@ -9,7 +9,7 @@
 int add(int a, int b, int c)
 {
 
-	sum = 0;
+sum = 0;
 
 	b = 6;
 	a = 13;
@@ -18,7 +18,5 @@ int add(int a, int b, int c)
 	sum = a + b + c;
 		printf("%d is the value of sum\n", sum);
 	return (sum);
-
-
 }
 
