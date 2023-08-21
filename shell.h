@@ -16,6 +16,4 @@
 void shell_pmt(char **av, char **env);
 int add(int a, int b, int c);
 
-
-
 #endif
