@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * main - this is the main shell entry
+ * main - this is the main shell access 
  * @ac: argument counts
  * @av: argument vector for recieving commands
  * @env: environtment variable
