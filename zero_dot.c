@@ -10,10 +10,10 @@ int main(void)
 
 	while (1)
 	{
-		printf("Luure&: ");
+		printf("MyShell> ");
 		if (fgets(input, sizeof(input), stdin) == NULL)
 		{
-			printf("\n");
+			printf("Exiting\n");
 			break;
 		}
 		input[strlen(input) - 1] = '\0';
@@ -27,14 +27,14 @@ int main(void)
 		if (child_process == -1)
 		{
 			perror("forking");
-			exit(0);
+			continue;
 		}
 		else if (child_process == 0)
 		{
 			if (execlp(input, input, (char *)NULL) == -1)
 			{
-				perror("Exec. not found: ");
-				exit(0);
+				perror(" ");
+				exit(1);
 			}
 		}
 		else
@@ -45,5 +45,4 @@ int main(void)
 		}
 	}
 	return (0);
-
 }
