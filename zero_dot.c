@@ -6,7 +6,8 @@
 int main(void)
 {
 	char input[MAX_INPUT_SIZE];
-	pid_t child_process;
+	FILE *cmd_output;
+	char cmd_output_line[MAX_INPUT_SIZE];
 
 	while (1)
 	{
@@ -22,27 +23,17 @@ int main(void)
 		{
 			continue;
 		}
-		child_process = fork();
-
-		if (child_process == -1)
+		cmd_output = popen(input, "r");
+		if (cmd_output == NULL)
 		{
-			perror("forking");
+			perror(" ");
 			continue;
 		}
-		else if (child_process == 0)
+		while (fgets(cmd_output_line, sizeof(cmd_output_line), cmd_output) != NULL)
 		{
-			if (execlp(input, input, (char *)NULL) == -1)
-			{
-				perror(" ");
-				exit(1);
-			}
+			printf("%s", cmd_output_line);
 		}
-		else
-		{
-			int status;
-
-			waitpid(child_process, &status, 0);
-		}
+		pclose(cmd_output);
 	}
 	return (0);
 }
